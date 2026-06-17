@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+ACE Coaching Classes
+</div>
+
+<div>
+<a href="/">Home</a>
+<a href="/courses">Courses</a>
+<a href="/notes">Notes</a>
+<a href="/logout">Logout</a>
+<a href="/profile">Profile</a>
+<a href="/certificate">Certificate</a>
+<a href="#">Watch Course</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>Welcome {{ username }}</h1>
+
+<p>
+Student Dashboard
+</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>📚 My Courses</h3>
+<p>
+Access all enrolled courses.
+</p>
+</div>
+
+<div class="card">
+<h3>🎥 Video Lectures</h3>
+<p>
+Watch recorded classes.
+</p>
+</div>
+
+<div class="card">
+<h3>📝 Notes</h3>
+<p>
+Download study materials.
+</p>
+</div>
+
+<div class="card">
+<h3>👤 Student Profile</h3>
+<p>
+Manage your profile.
+</p>
+</div>
+
+</section>
+
+<footer>
+
+<h3>ACE Coaching Classes</h3>
+
+<p>
+Learn • Practice • Succeed
+</p>
+
+</footer>
+
+</body>
+</html>

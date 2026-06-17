@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Courses</title>
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+<img src="{{ url_for('static', filename='logo.png') }}"
+height="60">
+<div>
+
+<a href="/dashboard">Dashboard</a>
+<a href="/profile">Profile</a>
+<a href="/certificate">Certificate</a>
+<a href="/logout">Logout</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>Video Courses</h1>
+
+<p>
+Premium Learning Platform
+</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>📘 Mathematics</h3>
+<p>Class 10 Mathematics Course</p>
+<a href="#">Watch Course</a>
+</div>
+
+<div class="card">
+<h3>🧪 Science</h3>
+<p>Physics, Chemistry, Biology</p>
+<a href="#">Watch Course</a>
+</div>
+
+<div class="card">
+<h3>📖 English</h3>
+<p>Grammar & Spoken English</p>
+<a href="#">Watch Course</a>
+</div>
+
+<div class="card">
+<h3>🎯 JEE / NEET</h3>
+<p>Competitive Preparation</p>
+<a href="#">Watch Course</a>
+</div>
+
+</section>
+
+</body>
+</html>
+

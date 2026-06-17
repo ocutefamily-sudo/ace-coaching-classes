@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Profile</title>
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+
+<div class="logo">
+<img src="{{ url_for('static', filename='logo.png') }}"
+height="60">
+</div>
+
+<div>
+<a href="/dashboard">Dashboard</a>
+<a href="/logout">Logout</a>
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>Student Profile</h1>
+
+<p>Welcome {{ username }}</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>👤 Name</h3>
+<p>{{ username }}</p>
+</div>
+
+<div class="card">
+<h3>📚 Status</h3>
+<p>Active Student</p>
+</div>
+
+<div class="card">
+<h3>🎓 Institute</h3>
+<p>ACE Coaching Classes</p>
+</div>
+
+</section>
+
+</body>
+</html>

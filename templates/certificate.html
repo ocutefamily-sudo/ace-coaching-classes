@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Certificate</title>
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav>
+<div class="logo">
+<img src="{{ url_for('static', filename='logo.png') }}"
+height="60">
+</div>
+
+<div>
+<a href="/dashboard">Dashboard</a>
+<a href="/profile">Profile</a>
+<a href="/logout">Logout</a>
+</div>
+</nav>
+
+<section class="hero">
+
+<h1>Certificate</h1>
+
+<p>
+This certifies that
+<b>{{ username }}</b>
+is a student of ACE Coaching Classes.
+</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+<h3>🏆 Achievement</h3>
+<p>Course Completion Certificate</p>
+</div>
+
+</section>
+
+</body>
+</html>
