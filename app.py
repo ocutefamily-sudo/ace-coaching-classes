@@ -17,9 +17,24 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
+
     name = db.Column(db.String(100))
+    father_name = db.Column(db.String(100))
+    school_name = db.Column(db.String(150))
+
     email = db.Column(db.String(100))
-    password = db.Column(db.String(100))
+    mobile = db.Column(db.String(20))
+
+    student_class = db.Column(db.String(50))
+    subject = db.Column(db.String(100))
+
+    address = db.Column(db.String(300))
+    dob = db.Column(db.String(30))
+
+    password = db.Column(db.String(200))
+
+
+
 
 
 # =====================
@@ -58,7 +73,8 @@ def login():
 
 # =====================
 # SIGNUP PAGE
-# =====================
+# =================
+
 
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
@@ -66,14 +82,32 @@ def signup():
     if request.method == "POST":
 
         name = request.form["name"]
+        father_name = request.form["father_name"]
+        school_name = request.form["school_name"]
+
         email = request.form["email"]
+        mobile = request.form["mobile"]
+
+        student_class = request.form["student_class"]
+        subject = request.form["subject"]
+
+        address = request.form["address"]
+        dob = request.form["dob"]
+
         password = request.form["password"]
 
         user = User(
-    name=name,
-    email=email,
-    password=generate_password_hash(password)
-)
+            name=name,
+            father_name=father_name,
+            school_name=school_name,
+            email=email,
+            mobile=mobile,
+            student_class=student_class,
+            subject=subject,
+            address=address,
+            dob=dob,
+            password=generate_password_hash(password)
+        )
 
         db.session.add(user)
         db.session.commit()
@@ -81,6 +115,10 @@ def signup():
         return redirect("/dashboard")
 
     return render_template("signup.html")
+
+
+
+
 
 
 # =====================
